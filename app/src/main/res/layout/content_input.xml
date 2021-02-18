@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".InputActivity"
+    tools:showIn="@layout/activity_input">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="タイトル" />
+    <EditText
+        android:id="@+id/title_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text" />
+
+    <TextView
+        android:id="@+id/nakami_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="内容"
+        android:layout_below="@id/title_edit_text" />
+    <EditText
+        android:id="@+id/content_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nakami_text" />
+
+    <TextView
+        android:id="@+id/category_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="カテゴリー"
+        android:layout_below="@id/content_edit_text" />
+    <EditText
+        android:id="@+id/category_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_text" />
+
+    <Button
+        android:id="@+id/date_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_edit_text"
+        android:layout_marginTop="-1dp"
+        android:layout_marginRight="-36dp"
+        android:layout_toLeftOf="@+id/times_button"
+        android:text="----/--/--"
+        android:textColor="@color/black"
+        app:iconTint="@color/black" />
+
+    <Button
+        android:id="@id/times_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_edit_text"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="126dp"
+        android:text="--:--"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/done_button"
+        android:layout_width="96dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/category_edit_text"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="決定" />
+
+</RelativeLayout>
